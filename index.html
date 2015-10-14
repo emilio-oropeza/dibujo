@@ -53,11 +53,17 @@
 			    width:100%;
 			    height:100%;
 			} 
+			.color_pick{
+				width: 50px;
+				height: 50px;
+				background: rgb(255, 0, 0) none repeat scroll 0% 0%;
+				display: inline-block;
+			}
 		</style>
 		<script type="text/javascript">
 			$(document).ready( function(){
 			    //Get the canvas & context
-			    var c = $('#simple_sketch');
+			    var c = $('#colors_sketch');
 			    var ct = c.get(0).getContext('2d');
 			    var container = $(c).parent();
 
@@ -79,10 +85,17 @@
 		<script type="text/javascript" src="js/sketch.js?v=1.0"></script>
 		<script type="text/javascript" src="js/indepth.js?v=1.0"></script>
 		<div id="indepth_content">
-			<canvas id="simple_sketch" width="100" height="100"></canvas>
+			<div class="tools">
+			  <a href="#colors_sketch" data-download="png" style="float: right; width: 100px;">Download</a>
+			  <a href="#colors_sketch" data-color="#000" class="color_pick" style="background-color: #000 "></a>
+			  <a href="#colors_sketch" data-color="#f00" class="color_pick" style="background-color: #f00 "></a>
+			  <a href="#colors_sketch" data-color="#A7CD2C" class="color_pick" style="background-color: #A7CD2C "></a>
+			  <a href="#colors_sketch" data-color="#F0B0C8" class="color_pick" style="background-color: #F0B0C8 "></a>
+			</div>
+			<canvas id="colors_sketch" width="800" height="300"></canvas>
 			<script type="text/javascript">
 			  $(function() {
-			    $('#simple_sketch').sketch();
+			    $('#colors_sketch').sketch();
 			  });
 			</script>
 		</div>	
