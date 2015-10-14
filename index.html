@@ -1,0 +1,98 @@
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=0, minimal-ui">
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<link href='http://fonts.googleapis.com/css?family=Roboto:400,100,700,900' rel='stylesheet' type='text/css'>
+		<link href="http://fonts.googleapis.com/css?family=Roboto+Condensed:300,400,700" rel="stylesheet" type="text/css">
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script>
+		<style>
+			html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, abbr, address, cite, code, del, dfn, em, img, ins, kbd, q, samp, small, strong, sub, sup, var, b, i, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary, time, mark, audio, video {
+				background: none repeat scroll 0 0 rgba(0, 0, 0, 0);
+				border: 0 none;
+				font-size: 100%;
+				margin: 0;
+				outline: 0 none;
+				padding: 0;
+				vertical-align: baseline;
+			}
+		</style>
+		<script type="text/javascript">
+			urlIndepth = "";
+		</script>
+		<script type="text/javascript" src="http://juanfutbol.com/js/juanfutbol/waypoints.min.js?v=1.5.38"></script>
+		<script type="text/javascript">
+			if(typeof(sharePopUp) != "function"){
+				function sharePopUp(social, url) {
+					var height = 0;
+					var width = 0;
+					var sn = "";
+					if(social == "fb"){ 
+						height = 370;
+						width = 580;
+					}else if(social == "tw"){
+						height = 220;
+						width = 580;
+					}else if(social == "pin"){
+						height = 480;
+						width = 420;
+					}
+					//clickstats(, , , social);
+					/*if(shareWindow != undefined && shareWindow.closed == false){
+						shareWindow.close();
+					}*/
+					shareWindow = window.open(url, "shareUrl", "status=0,height="+height+",width="+width+",resizable=0,menubar=0");
+				}
+			}
+		</script>
+	</head>
+	<body>
+		<link type="text/css" rel="stylesheet" href="css/indepth.css?v=1.0"/>
+		<style type="text/css">
+			
+			#indepth_content{
+			    display:block;
+			    width:100%;
+			    height:100%;
+			    border: 1px solid #000;
+			} 
+		</style>
+		<script type="text/javascript">
+			$(document).ready( function(){
+			    //Get the canvas & context
+			    var c = $('#simple_sketch');
+			    var ct = c.get(0).getContext('2d');
+			    var container = $(c).parent();
+
+			    //Run function when browser resizes
+			    $(window).resize( respondCanvas );
+
+			    function respondCanvas(){ 
+			        c.attr('width', $(container).width() ); //max width
+			        c.attr('height', $(container).height() ); //max height
+
+			        //Call a function to redraw other content (texts, images etc)
+			    }
+
+			    //Initial call 
+			    respondCanvas();
+
+			}); 
+		</script>
+		<script type="text/javascript" src="js/sketch.min.js?v=1.0"></script>
+		<script type="text/javascript" src="js/indepth.js?v=1.0"></script>
+		<div id="indepth_content">
+			<canvas id="simple_sketch" width="100%" height="100%"></canvas>
+			<script type="text/javascript">
+			  $(function() {
+			    $('#simple_sketch').sketch();
+			  });
+			</script>
+		</div>	
+		<div class="indepth_share">
+			<a href="javascript:sharePopUp('fb', 'https%3A%2F%2Fwww.facebook.com%2Fsharer.php%3Fs%3D100%26p%5Bimages%5D%5B0%5D%3Dhttp%3A%2F%2Fs3.amazonaws.com%2Fstadium-azteca%2Fpage%2F66bf9cfb-d0b3-4698-b6ad-2052267a76b7%2Ffinal%2Fimages%2FTop_1.png%26p%5Burl%5D%3Dhttp%3A%2F%2Fjuanfutbol.com%2Findepth%2Fhistorias-con-power');"><div class="indepth_share_item facebook"></div></a>
+			<a href="javascript:sharePopUp('tw', 'https%3A%2F%2Ftwitter.com%2Fshare%3Fvia%3Djuanfutbol%26text%3DInmortaliza%20tus%20historias%20con%20Power%26url%3Dhttp%3A%2F%2Fjuanfutbol.com%2Findepth%2Fhistorias-con-power%26hashtags%3DHayPower');"><div class="indepth_share_item twitter"></div></a>
+			<a href="whatsapp://send?text=Inmortaliza tus historias con Power http%3A%2F%2Fjuanfutbol.com%2Findepth%2Fhistorias-con-power"  target="_blank"><div class="indepth_share_item whatsapp"></div></a>
+		</div>
+		<div id="indepth_footer"></div>		
+	</body>
+</html>
