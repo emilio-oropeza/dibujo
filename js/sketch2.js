@@ -1,9 +1,3 @@
-var $msg;
-function Msg(text){
-    if (!$msg) $msg = $('#msgInput');
-    $msg.val(text);
-}
-
 var __slice = Array.prototype.slice;
 (function($) {
   var Sketch;
@@ -110,7 +104,7 @@ var __slice = Array.prototype.slice;
       e.preventDefault();
       return false;
     };
-    Sketch.prototype.redraw = function() {        
+    Sketch.prototype.redraw = function() {
       var sketch;
       this.el.width = this.canvas.width();
       this.context = this.el.getContext('2d');
@@ -131,13 +125,9 @@ var __slice = Array.prototype.slice;
   };
   $.sketch.tools.marker = {
     onEvent: function(e) {
-        
       switch (e.type) {
         case 'mousedown':
-        case 'touchstart':          
-          if (this.painting) {
-            this.stopPainting();
-          }
+        case 'touchstart':
           this.startPainting();
           break;
         case 'mouseup':
@@ -145,7 +135,6 @@ var __slice = Array.prototype.slice;
         case 'mouseleave':
         case 'touchend':
         case 'touchcancel':
-
           this.stopPainting();
       }
       if (this.painting) {
@@ -178,7 +167,7 @@ var __slice = Array.prototype.slice;
     onEvent: function(e) {
       return $.sketch.tools.marker.onEvent.call(this, e);
     },
-    draw: function(action) {        
+    draw: function(action) {
       var oldcomposite;
       oldcomposite = this.context.globalCompositeOperation;
       this.context.globalCompositeOperation = "destination-out";

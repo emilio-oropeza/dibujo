@@ -59,6 +59,9 @@
 				background: rgb(255, 0, 0) none repeat scroll 0% 0%;
 				display: inline-block;
 			}
+			canvas{
+				background-image: url("images/battlefront.jpg");
+			}
 		</style>
 		<script type="text/javascript">
 			$(document).ready( function(){
@@ -86,11 +89,16 @@
 		<script type="text/javascript" src="js/indepth.js?v=1.0"></script>
 		<div id="indepth_content">
 			<div class="tools">
-			  <a href="#colors_sketch" data-download="png" style="float: right; width: 100px;">Download</a>
-			  <a href="#colors_sketch" data-color="#000" class="color_pick" style="background-color: #000 "></a>
-			  <a href="#colors_sketch" data-color="#f00" class="color_pick" style="background-color: #f00 "></a>
-			  <a href="#colors_sketch" data-color="#A7CD2C" class="color_pick" style="background-color: #A7CD2C "></a>
-			  <a href="#colors_sketch" data-color="#F0B0C8" class="color_pick" style="background-color: #F0B0C8 "></a>
+				<a href="#colors_sketch" data-tool="eraser">Eraser</a>
+				<a href="#colors_sketch" data-tool="marker">Lapiz</a>
+			  	<a href="#colors_sketch" data-color="#000" class="color_pick" style="background-color: #000 "></a>
+				<a href="#colors_sketch" data-color="#f00" class="color_pick" style="background-color: #f00 "></a>
+				<a href="#colors_sketch" data-color="#A7CD2C" class="color_pick" style="background-color: #A7CD2C "></a>
+				<a href="#colors_sketch" data-color="#F0B0C8" class="color_pick" style="background-color: #F0B0C8 "></a>
+				<a href='#colors_sketch' data-size='3' style='background: #ccc'>3</a>
+				<a href='#colors_sketch' data-size='5' style='background: #ccc'>5</a>
+				<a href='#colors_sketch' data-size='10' style='background: #ccc'>10</a>
+				<a href='#colors_sketch' data-size='15' style='background: #ccc'>15</a>	 
 			</div>
 			<canvas id="colors_sketch" width="800" height="300"></canvas>
 			<script type="text/javascript">
