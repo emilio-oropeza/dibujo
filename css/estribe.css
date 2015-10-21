@@ -1,0 +1,114 @@
+#indepth_content{
+    display:block;
+    width:100%;
+    height:100%;
+}
+#indepth_canvas {
+    height: 100vh;
+    width: 100vw;
+}
+#canvas_tool {
+    width: 100%;
+    height: 100px;
+    background-color: #2E3033;
+    position: absolute;
+    top: 0;
+    z-index: 10;
+}
+	#tool_menu {
+	    width: 35px;
+		height: 30px;
+		padding: 35px 0px 35px 20px;
+		display: inline-block;
+		cursor: pointer;
+	}
+	#tool_menu span {
+	    display: inline-block;
+	    border: 2px solid #ffffff;
+	    width: 32px;
+	    margin-bottom: 8px;
+	}
+	.tools_logo {
+	    height: 60px;
+	    float: right;
+	    width: 60px;
+	    margin: 20px 2px;
+	    cursor: pointer;
+	    position: relative;
+	    background-position: center;
+	}
+	#tool_pluma{background-image: url("../images/btns/btn_up_pluma.png");}
+	#tool_size{background-image: url("../images/btns/btn_circulo.png");}
+	#tool_color{background-image: url("../images/btns/btn_up_color.png");}
+	#tool_eraser{background-image: url("../images/btns/btn_up_goma.png");}
+
+	#tool_pluma.active{background-image: url("../images/btns/btn_active_pluma.png");}
+	#tool_eraser.active{background-image: url("../images/btns/btn_active_goma.png");}
+	#tool_color.active, #tool_size.active {
+	    background-color: #FFFFFF;
+	    border-radius: 60px;
+	    box-shadow: 1px 1px 5px #888;
+	}
+	.size5{
+		width: 7px;
+	 	height: 7px;
+	 	border-radius: 7px;
+	 	margin: 26.5px;
+	}
+	.size10{
+		width: 10px;
+	 	height: 10px;
+	 	border-radius: 10px;
+	 	margin: 25px;
+	}
+	.size20{
+		width: 20px;
+	 	height: 20px;
+	 	border-radius: 20px;
+	 	margin: 20px;
+	}
+	.size30{
+		width: 30px;
+	 	height: 30px;
+	 	border-radius: 30px;
+	 	margin: 15px;
+	}
+	.size_marker {
+	    background-color: #58616F;
+	}
+	.options {
+	    width: 60px;
+	    background-color: #FFFFFF;
+	    border-radius: 0px 0px 10px 10px;
+	    position: absolute;
+	    top: 30px;
+	    margin: auto;
+	    left: 0px;
+	    right: 0px;
+	    z-index: -1;
+	    box-shadow: 0px 2px 5px #888;
+	    padding-top: 30px;
+	    display: none;
+	}
+	#tool_color .options{
+		height: 100px;
+	}
+	#tool_size .options{
+		height: 180px;
+	}
+
+#canvas_content {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+}
+	canvas{
+		background-image: url("../images/back_desktop.jpg");
+		background-position: center;
+		background-size: cover;
+	}
+@media(min-width: 400px){
+	.tools_logo{
+		margin: 20px 10px;
+	}
+}
