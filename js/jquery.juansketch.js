@@ -17,6 +17,9 @@
 					componentObj.methods.pointers();
 					componentObj.methods.choose($("#tool_color"), true);
 					componentObj.methods.choose($("#tool_size"), false);
+					$("#tool_menu").on("click", function(){
+						$("#canvas_share").toggle();
+					});
 				},
 				choose: function(option, color){
 					$(option).on("click", function(){

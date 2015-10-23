@@ -19,6 +19,30 @@
 		<script type="text/javascript">
 			urlIndepth = "";
 		</script>
+		<script type="text/javascript">
+			if(typeof(sharePopUp) != "function"){
+				function sharePopUp(social, url) {
+					var height = 0;
+					var width = 0;
+					var sn = "";
+					if(social == "fb"){ 
+						height = 370;
+						width = 580;
+					}else if(social == "tw"){
+						height = 220;
+						width = 580;
+					}else if(social == "pin"){
+						height = 480;
+						width = 420;
+					}
+					//clickstats(, , , social);
+					/*if(shareWindow != undefined && shareWindow.closed == false){
+						shareWindow.close();
+					}*/
+					shareWindow = window.open(url, "shareUrl", "status=0,height="+height+",width="+width+",resizable=0,menubar=0");
+				}
+			}
+		</script>
 	</head>
 	<body>
 		<link type="text/css" rel="stylesheet" href="css/estribe.css?v=1.0"/>
@@ -66,9 +90,28 @@
 					<a href="#canvas_sketch" data-tool="marker">
 						<div id="tool_pluma" class="tools_logo pointer active"></div>
 					</a>
-				</div>
-				<div ></div>	
+					<a href="#canvas_sketch" data-clear='true'>
+						<div id="tool_clear" class="tools_logo"></div>
+					</a>
+				</div>	
 				<div id="canvas_content">
+				<div id="canvas_share">
+						<div id="share_content">
+							<div id="share_title">IMAGINA. DIBUJA. TROLLEA.</div><br>
+							<div id="share_txt">
+								En <span>#EsTRIbe</span> haz un seguimiento
+								de todos los apuntes del colombiano
+								con la Selección Nacional de México...<br>
+								¡estos son los primeros!
+							</div><br>
+							<div id="share_txt2">SHARE / DOWNLOAD</div>
+							<div id="share_icon">
+								<a href="javascript:sharePopUp('fb', 'https%3A%2F%2Fwww.facebook.com%2Fsharer.php%3Fu%3Dhttp%3A%2F%2Fwww.reto.rexona.com.mx%2F');"><div class="indepth_share_item facebook"></div></a>
+								<a href="javascript:sharePopUp('tw', 'https%3A%2F%2Ftwitter.com%2Fintent%2Ftweet%3Fvia%3DRexonaMenMexico%26text%3DParticipa%20en%20el%20RetoRexona%20para%20tener%20la%20oportunidad%20de%20ganar%26url%3Dhttp%3A%2F%2Fwww.reto.rexona.com.mx%2F%26hashtags%3DRetoRexona');"><div class="indepth_share_item twitter"></div></a>
+								<a href="#canvas_sketch" data-download="png"><div class="indepth_share_item download"></div></a>
+							</div>
+						</div>
+					</div>
 					<canvas id="canvas_sketch"></canvas>
 				</div>
 			</div>

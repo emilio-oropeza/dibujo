@@ -67,6 +67,9 @@ var __slice = Array.prototype.slice;
           if ($(this).attr('data-download')) {
             sketch.download($(this).attr('data-download'));
           }
+          if ($(this).attr('data-clear')) {
+            sketch.clear();
+          }
           return false;
         });
       }
@@ -109,6 +112,10 @@ var __slice = Array.prototype.slice;
       $.sketch.tools[$(this).data('sketch').tool].onEvent.call($(this).data('sketch'), e);
       e.preventDefault();
       return false;
+    };
+    Sketch.prototype.clear = function() {
+      this.actions = [];
+      return this.redraw();
     };
     Sketch.prototype.redraw = function() {        
       var sketch;
